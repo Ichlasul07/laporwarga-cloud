@@ -61,7 +61,7 @@
                 @foreach ($reports as $report)
                     <div class="bg-white rounded-2xl shadow overflow-hidden">
 
-                        <img src="{{ asset('storage/' . $report->photo) }}" class="w-full h-64 object-cover">
+                        <img src="{{ env('AWS_URL') . '/' . $report->photo }}" class="w-full h-64 object-cover">
 
                         <div class="p-6">
 

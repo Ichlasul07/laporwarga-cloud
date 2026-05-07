@@ -29,7 +29,7 @@ class ReportController extends Controller
             'photo' => 'required|image'
         ]);
 
-        $path = $request->file('photo')->store('reports', 'public');
+        $path = $request->file('photo')->store('reports', 's3');
 
         Report::create([
             'title' => $request->title,
