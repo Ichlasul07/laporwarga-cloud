@@ -30,6 +30,7 @@ class ReportController extends Controller
         ]);
 
         $path = $request->file('photo')->store('reports', 's3');
+        
 
         Report::create([
             'title' => $request->title,
